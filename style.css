@@ -16,3 +16,12 @@ ul {
 	list-style-type: none;
 	padding: 0px;
 }
+/*tbody {
+	display: block;
+	overflow: auto;
+	height: 300px;
+}
+tbody td, thead th {
+    width: 29.2%;
+    float: left;
+}*/
