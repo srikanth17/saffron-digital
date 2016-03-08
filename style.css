@@ -10,6 +10,7 @@ button {
 	border-top: 0px;
 }
 label {
+	opacity: 0.5;
 	font-weight: 400;
 }
 ul {
