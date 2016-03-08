@@ -19,24 +19,26 @@
 				<table class="table">
             		<tbody>
                 		<tr ng-repeat="win in wins">
-							<td><label>Window name</label><br />
+							<td class="fixed"><label>Window name</label><br />
                     		<input class="form-contact" ng-model="win.name"></td>
-							<td><label>Start date</label><br />
+							<td class="fixed"><label>Start date</label><br />
                     		<input class="form-contact" ng-model="win.start" jqdatepicker on-change-date="changeStartDate(index,date)" index=$index></td>
-							<td><label>End date</label><br />
+							<td class="fixed"><label>End date</label><br />
 							<input class="form-contact" ng-model="win.end" jqdatepicker on-change-date="changeEndDate(index,date)" index=$index></td>
-							<td><button class="btn btn-danger" ng-click="removeWindow($index)">Remove</button></td>	
+							<td class="fixed"><button type="button" class="btn btn-danger btn-circle btn-lg" ng-click="removeWindow($index)"><i class="glyphicon glyphicon-remove"></i></button></td>	
                 		</tr>
             		</tbody>
         		</table>
 				<hr />
+				<div class="bar">
 				<ul ng-repeat="win in wins">
 					<li>{{ win.name }}
 					<div class="progress">
-  						<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{ width[$index] }}%;">
+  						<div class="{{colors[$index]}}" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" progressbar total="maxWidth" current="width[$index]">
   						</div>
 					</div>
 				</ul>
+				</div>
 			</div>
     	</div>
 	</div>
